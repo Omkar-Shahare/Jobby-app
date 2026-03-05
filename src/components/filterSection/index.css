@@ -1,0 +1,74 @@
+.filter-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.dp {
+        background-image: url(https://assets.ccbp.in/frontend/react-js/profile-bg.png);
+        background-size: cover;
+        padding: 20px;
+        border-radius: 12px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+}
+
+.profile-img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+}
+
+.profile-name {
+        color: #1e293b;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+}
+
+.profile-bio {
+        color: #475569;
+        font-size: 14px;
+        margin-top: 5px;
+}
+
+/* Filters */
+.filter-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1e293b;
+        margin-top: 25px;
+        margin-bottom: 15px;
+}
+
+.filter-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+}
+
+.filter-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+}
+
+.filter-label {
+        margin: 0 0 0 10px;
+        color: #475569;
+        font-size: 15px;
+        cursor: pointer;
+}
+
+.checkbox-input,
+.radio-input {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: #3b82f6;
+}

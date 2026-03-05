@@ -1,0 +1,78 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f5f9;
+  /* Match job item details bg */
+}
+
+/* Remove purple background */
+body {
+  background-color: transparent;
+}
+
+/* Main container */
+.main-cont {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.jobs-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Search bar wrapper */
+.search-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* Layout Grid for Filters and Jobs */
+.jobs-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* On desktop, side-by-side */
+@media (min-width: 900px) {
+  .jobs-layout {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.jobs-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
