@@ -1,16 +1,34 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100vh;
 }
-.form-cont{
+
+.form-cont {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 100px;
+}
+
+.login-form {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-cont {
+        margin-left: 0px;
+        padding: 0px 20px;
+    }
+
+    .login-form {
+        width: 100%;
+    }
 }

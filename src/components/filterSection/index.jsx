@@ -11,7 +11,7 @@ const FilterSection = (props) => {
         jobsProfile: {}
     });
 
-    const { onChangeEmpType } = props;
+    const { onChangeEmpType, onChangeSalary } = props;
 
     const empTypeArr = [
         {
@@ -23,8 +23,8 @@ const FilterSection = (props) => {
             title: "Part Time"
         },
         {
-            id: "INTERSHIP",
-            title: "Intership"
+            id: "INTERNSHIP",
+            title: "Internship"
         },
         {
             id: "FREELANCE",
@@ -34,19 +34,19 @@ const FilterSection = (props) => {
 
     const salaryTypeArr = [
         {
-            id: "10LPA",
+            id: "1000000",
             title: "10 LPA and above"
         },
         {
-            id: "20LPA",
+            id: "2000000",
             title: "20 LPA and above"
         },
         {
-            id: "30LPA",
+            id: "3000000",
             title: "30 LPA and above"
         },
         {
-            id: "40LPA",
+            id: "4000000",
             title: "40 LPA and above"
         }
     ]
@@ -103,9 +103,13 @@ const FilterSection = (props) => {
 
         const { id, title } = each;
 
+        const onSelectSalary = () => {
+            onChangeSalary(id);
+        }
+
         return (
             <li key={id}>
-                <input type="radio" name="salary" className="radio-input" id={id} value={id} />
+                <input type="radio" name="salary" className="radio-input" id={id} value={id} onChange={onSelectSalary} />
                 <label className="filter-label" htmlFor={id}>{title}</label>
             </li>
         )

@@ -35,7 +35,7 @@ const Jobs = () => {
 
         const fetchJobs = async () => {
 
-            const api = `https://apis.ccbp.in/jobs?employment_type=${empType}&salary_ranger=${minPakage}&search=${userInput}`;
+            const api = `https://apis.ccbp.in/jobs?employment_type=${empType}&minimum_package=${minPakage}&search=${userInput}`;
 
             const options = {
                 method: "Get",
@@ -67,7 +67,7 @@ const Jobs = () => {
         }
         fetchJobs();
 
-    }, [allValues.userInput, allValues.empType]);
+    }, [allValues.userInput, allValues.empType, allValues.minPakage]);
 
     const onSearchJobs = (e) => {
 
@@ -90,6 +90,10 @@ const Jobs = () => {
         }
     }
 
+    const onChangeSalary = (value) => {
+        setValues({ ...allValues, minPakage: value });
+    }
+
     return (
 
         <div className='main-cont'>
@@ -105,7 +109,7 @@ const Jobs = () => {
                 <div className='jobs-layout'>
 
                     <div className='filter-wrapper'>
-                        <FilterSection onChangeEmpType={onChangeEmpType} />
+                        <FilterSection onChangeEmpType={onChangeEmpType} onChangeSalary={onChangeSalary} />
                     </div>
 
                     <ul className='jobs-list-wrapper'>
